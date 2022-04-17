@@ -16,8 +16,8 @@ public class Constant {
     public static final String INPUT_GUIDE = "숫자를 입력해주세요 : ";
     public static final String RESTART_END_WARNING = "입력은 1혹은 2여야 합니다.";
     public static final String NOTHING_MESSAGE = "낫싱";
-    public static final String BALL_MESSAGE = "%d 볼";
-    public static final String STRIKE_MESSAGE ="%d 스트라이크";
-    public static final String GAME_END_MESSAGE = "\n3개의 숫자를 모두 맞히셨습니다 축하합니다. 게임종료";
+    public static final String BALL_MESSAGE = "볼";
+    public static final String STRIKE_MESSAGE ="스트라이크";
+    public static final String GAME_END_MESSAGE = "게임 종료";
 
 }

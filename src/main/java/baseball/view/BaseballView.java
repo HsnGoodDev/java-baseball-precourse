@@ -3,6 +3,7 @@ package baseball.view;
 import camp.nextstep.edu.missionutils.Console;
 
 import static baseball.constant.Constant.*;
+import static java.lang.String.format;
 
 public class BaseballView {
 
@@ -31,16 +32,36 @@ public class BaseballView {
      * @param strike 길이
      */
     public void matchResult(int ball, int strike){
-        if(ball >0){
-            System.out.printf((BALL_MESSAGE) + "%n", ball);
-        }
-        if(strike >0){
-            System.out.printf((STRIKE_MESSAGE) + "%n", strike);
+
+        if(ball > 0 && strike > 0){
+            printTwo(ball, strike);
         }
         if(ball < 1 && strike < 1){
             System.out.println(NOTHING_MESSAGE);
         }
+        print(ball, BALL_MESSAGE);
+        print(strike, STRIKE_MESSAGE);
         System.out.println();
+    }
+
+    /**
+     * ball 과 strike 출력
+     * @param count 수
+     * @param unit  단위
+   위 */
+    private void print(int count, String unit) {
+        if(count > 0){
+            System.out.println(count + unit +" ");
+        }
+    }
+
+    /**
+     * ball 과 strike 출력
+     * @param ball 볼 수
+     * @param strike 스트라이크 수
+     */
+    private void printTwo(int ball, int strike) {
+        System.out.println(ball + BALL_MESSAGE + " " + strike + STRIKE_MESSAGE + " ");
     }
 
     /**
